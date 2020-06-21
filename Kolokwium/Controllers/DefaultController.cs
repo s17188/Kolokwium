@@ -18,7 +18,7 @@ namespace Kolokwium.Controllers
         }
 
         [HttpGet]
-        [Route("tests")]
+        [Route("testss")]
         public IActionResult GetTracks()
         {
             var res = 0;
