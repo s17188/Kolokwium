@@ -18,7 +18,7 @@ namespace Kolokwium.Controllers
         }
 
         [HttpGet]
-        [Route("championship")]
+        [Route("tests")]
         public IActionResult GetTracks()
         {
             var res = 0;
@@ -26,7 +26,7 @@ namespace Kolokwium.Controllers
         }
 
         [HttpPost]
-        [Route("teams/{teamId}/players")]
+        [Route("{id}")]
 
         public IActionResult InsertPlayer()
         {
