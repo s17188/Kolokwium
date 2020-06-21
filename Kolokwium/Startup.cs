@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Kolokwium.Models;
 using Kolokwium.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,10 +28,10 @@ namespace Kolokwium
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IDBService, SqlServerService>();
-            //services.AddDbContext<s1788Context>(options =>
-            //{
-            //    options.UseSqlServer("Data Source=db-mssql;Initial Catalog=s17188;Integrated Security=True");
-            //});
+            services.AddDbContext<s17188Context>(options =>
+            {
+                options.UseSqlServer("Data Source=db-mssql;Initial Catalog=s17188;Integrated Security=True");
+            });
             services.AddControllers();
         }
 
